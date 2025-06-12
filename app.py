@@ -19,8 +19,10 @@ def clean_text(text):
 # ---------- Data Loading ----------
 @st.cache_data
 def load_data():
-    fake = pd.read_csv("Fake.csv").sample(1000)
-    true = pd.read_csv("True.csv").sample(1000)
+    fake = pd.read_csv("fake_small.csv")
+    true = pd.read_csv("true_small.csv")
+
+
 
     fake['label'] = 0
     true['label'] = 1
